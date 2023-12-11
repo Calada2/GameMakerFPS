@@ -4,4 +4,4 @@
 
 
 //move(-2, 0)
-rotate(3)
+rotate(-3)

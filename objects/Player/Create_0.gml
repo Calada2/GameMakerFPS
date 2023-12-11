@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+globalvar player_speed;
+
+player_speed = 2.5
 
 function move(dx, dy)
 {
-var pspeed = .1
+var pspeed = .1 * player_speed
 var angle = degtorad(image_angle)
 var x_speed = (cos(angle) * dx + sin(angle) * dy) * pspeed; 
 var y_speed = (sin(angle) * dx + cos(angle) * dy) * pspeed;

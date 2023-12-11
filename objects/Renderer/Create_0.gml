@@ -20,7 +20,7 @@ function trace()
 	var angleStart = global.player_angle - global.fov / 2
 	var precision = 10
 	var max_distance = 1000
-	for(var n = 0; n < room_width; ++n) if(n % 1 == 0)
+	for(var n = 0; n < room_width; ++n) if(n % 4 == 0)
 	{
 		var rX = global.player_x
 		var rY = global.player_y
@@ -39,7 +39,7 @@ function trace()
 
 		if (hit[0] != noone) {
 			
-			hitObj = brick
+			hitObj = Sprite25
 		} 
 		//Sort these based on distance
 		if(hitObj == noone)
@@ -59,7 +59,7 @@ function trace()
 			distance = cos(degtorad(angleStart + ((n - global.fov/2) * angleStep) - global.player_angle)) * distance
 			var miss = (room_height - (room_height / (distance / 15))) / 2 
 		
-			if(n % 1 == 0)drawLine(n, miss, hitObj, ((round(hit[1] * 4) * 1 + round(hit[2] * 4))), 1)
+			if(n % 1 == 0)drawLine(n, miss, hitObj, ((round(hit[1] * 10) * 1 + round(hit[2] * 10))), 4)
 			//drawLine(n, miss, hitObj, n/4, 1)
 			continue
 		}
